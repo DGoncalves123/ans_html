@@ -4,7 +4,7 @@
  */
 
 // Import the WASM module loader
-self.importScripts('/mz2synth.js');
+self.importScripts('/ans_html/mz2synth.js');
 
 let wasmModule = null;
 let isInitialized = false;

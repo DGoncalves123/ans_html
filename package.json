@@ -5,8 +5,9 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
-    "build": "nx build",
-    "build:ghpages": "VITE_BASE_PATH=/ans_html/ nx build",
+    "patch:art-color": "./scripts/patch-art-color.sh",
+    "build": "npm run patch:art-color && nx build",
+    "build:ghpages": "npm run patch:art-color && VITE_BASE_PATH=/ans_html/ nx build",
     "test": "nx test",
     "wasm:setup": "./scripts/setup-emscripten.sh",
     "wasm:build": "./scripts/build-wasm.sh",
